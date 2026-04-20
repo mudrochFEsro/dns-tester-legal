@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DNS/HTTP Tester — Legal</title>
+<style>
+html { background: #a5a4ce; font-family: 'Courier New', monospace; font-size: 10pt; }
+body { padding: 0; margin: 0; }
+.window { position: relative; margin: 2em auto; width: 90%; max-width: 700px; background: #3465a4; color: #fff; border: 6px double #fff; padding: 1.5em; box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0,0,0,.5); }
+h1, h2 { text-align: center; }
+h2 { color: #ff0; border-bottom: 1px solid #a8a8a8; padding-bottom: .3em; }
+h3 { color: #0ff; }
+a { color: #0ff; }
+.lang-nav { background: silver; text-align: center; padding: .5em; font-weight: bold; position: sticky; top: 0; z-index: 10; }
+.lang-nav a { color: #000; text-decoration: none; padding: 0 .8em; display: inline-block; }
+.lang-nav a:hover, .lang-nav a.active { background: #00f; color: #fff; }
+.section { display: none; }
+.section.active { display: block; }
+button.tab { background: green; color: #fff; border: 1px outset green; padding: .3em 1em; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; margin: .2em; box-shadow: .3em .3em 2px rgba(0,0,0,.4); }
+button.tab:hover { background: #32cd32; }
+button.tab.active { background: grey; box-shadow: none; }
+.tab-row { text-align: center; margin: 1em 0; }
+footer { background: silver; text-align: center; padding: 1em; color: #000; font-weight: bold; }
+ul { padding-left: 1.5em; }
+@media (max-width: 600px) { .window { width: 95%; padding: 1em; margin: 1em auto; } }
+</style>
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.lang-nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  document.querySelector('.lang-nav a[data-lang="' + lang + '"]').classList.add('active');
+}
+function switchTab(lang, tab) {
+  var section = document.getElementById('lang-' + lang);
+  section.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+  section.querySelectorAll('button.tab').forEach(b => b.classList.remove('active'));
+  section.querySelector('#' + lang + '-' + tab).style.display = 'block';
+  event.target.classList.add('active');
+}
+</script>
+</head>
+<body>
+
+<div class="lang-nav">
+  <a href="#" data-lang="en" class="active" onclick="switchLang('en');return false;">EN</a>
+  <a href="#" data-lang="sk" onclick="switchLang('sk');return false;">SK</a>
+  <a href="#" data-lang="cz" onclick="switchLang('cz');return false;">CZ</a>
+  <a href="#" data-lang="de" onclick="switchLang('de');return false;">DE</a>
+  <a href="#" data-lang="ru" onclick="switchLang('ru');return false;">RU</a>
+  <a href="#" data-lang="fr" onclick="switchLang('fr');return false;">FR</a>
+  <a href="#" data-lang="ja" onclick="switchLang('ja');return false;">JP</a>
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="section active">
+<div class="window">
+<h1>DNS/HTTP Tester</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('en','privacy')">Privacy Policy</button>
+  <button class="tab" onclick="switchTab('en','terms')">Terms of Service</button>
+</div>
+
+<div id="en-privacy" class="tab-content">
+<h2>Privacy Policy</h2>
+<p><em>Effective: 2026-04-20</em></p>
+<p>DNS/HTTP Tester ("the App") is a network diagnostic tool. We take your privacy seriously.</p>
+<h3>Data Collection</h3>
+<p>The App does NOT collect, store, or transmit any personal data to our servers. All operations run locally on your device.</p>
+<h3>Local Storage</h3>
+<p>Query history (up to 50 entries) is stored locally on your device. This data never leaves your device. You can clear it at any time.</p>
+<h3>Third-Party Services</h3>
+<p>The App makes requests to public DNS-over-HTTPS resolvers:</p>
+<ul>
+<li>Cloudflare (1.1.1.1)</li>
+<li>Google (8.8.8.8)</li>
+<li>Quad9 (9.9.9.9)</li>
+<li>Mozilla</li>
+<li>Wikimedia</li>
+</ul>
+<p>For SSL checks: crt.sh. For WHOIS: rdap.org and api.whois.vu. Only the domain name is sent — no personal identifiers.</p>
+<h3>Analytics & Tracking</h3>
+<p>The App does not use any analytics, crash reporting, advertising SDKs, or tracking.</p>
+<h3>Children's Privacy</h3>
+<p>The App does not knowingly collect information from children under 13.</p>
+<h3>Contact</h3>
+<p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+
+<div id="en-terms" class="tab-content" style="display:none">
+<h2>Terms of Service</h2>
+<p><em>Effective: 2026-04-20</em></p>
+<h3>Acceptance</h3>
+<p>By purchasing and using DNS/HTTP Tester, you agree to these Terms.</p>
+<h3>License</h3>
+<p>You receive a non-exclusive, non-transferable license to use the App on your own devices.</p>
+<h3>No Warranty</h3>
+<p>The App is provided "as is" without warranties. Results are informational only.</p>
+<h3>Limitation of Liability</h3>
+<p>The developer is not liable for any damages arising from the use of the App.</p>
+<h3>Refunds</h3>
+<p>Governed by Apple App Store / Google Play Store terms.</p>
+<h3>Contact</h3>
+<p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- SLOVAK -->
+<div id="lang-sk" class="section">
+<div class="window">
+<h1>DNS/HTTP Tester</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('sk','privacy')">Ochrana sukromia</button>
+  <button class="tab" onclick="switchTab('sk','terms')">Podmienky</button>
+</div>
+<div id="sk-privacy" class="tab-content">
+<h2>Ochrana sukromia</h2>
+<p><em>Ucinne od: 2026-04-20</em></p>
+<p>DNS/HTTP Tester je nastroj na diagnostiku siete. Vase sukromie berieme vazne.</p>
+<h3>Zber dat</h3>
+<p>Aplikacia NEZBIERA, neuklada ani neprena&#353;a ziadne osobne udaje. Vsetko bezi lokalne na vasom zariadeni.</p>
+<h3>Lokalne ulozisko</h3>
+<p>Historia dotazov (max 50) je ulozena lokalne. Data nikdy neopustaju zariadenie.</p>
+<h3>Sluzby tretich stran</h3>
+<p>Aplikacia posiela dotazy na verejne DNS-over-HTTPS resolvery (Cloudflare, Google, Quad9, Mozilla, Wikimedia). Pre SSL: crt.sh. Pre WHOIS: rdap.org a api.whois.vu. Odosila sa len nazov domeny.</p>
+<h3>Analytika</h3>
+<p>Aplikacia nepouziva ziadnu analytiku, reklamy ani sledovanie.</p>
+<h3>Kontakt</h3>
+<p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="sk-terms" class="tab-content" style="display:none">
+<h2>Podmienky sluzby</h2>
+<p><em>Ucinne od: 2026-04-20</em></p>
+<h3>Suhlas</h3><p>Zakupenim a pouzivanim aplikacie suhlasi&#769;te s tymito podmienkami.</p>
+<h3>Licencia</h3><p>Dostavate nevyhradnu licenciu na pouzivanie aplikacie na vlastnych zariadeniach.</p>
+<h3>Bez zaruky</h3><p>Aplikacia je poskytovana "tak ako je" bez akychkolvek zaruk.</p>
+<h3>Vratenie penazi</h3><p>Podmienky sa riadia pravidlami Apple App Store a Google Play Store.</p>
+<h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- CZECH -->
+<div id="lang-cz" class="section">
+<div class="window">
+<h1>DNS/HTTP Tester</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('cz','privacy')">Ochrana soukromi</button>
+  <button class="tab" onclick="switchTab('cz','terms')">Podminky</button>
+</div>
+<div id="cz-privacy" class="tab-content">
+<h2>Ochrana soukromi</h2>
+<p><em>Ucinne od: 2026-04-20</em></p>
+<p>DNS/HTTP Tester je nastroj pro diagnostiku site. Vase soukromi bereme vazne.</p>
+<h3>Sber dat</h3><p>Aplikace NESBIRA, neuklada ani neprena&#353;i zadne osobni udaje. Vse bezi lokalne.</p>
+<h3>Lokalni uloziste</h3><p>Historie dotazu (max 50) je ulozena lokalne na vasem zarizeni.</p>
+<h3>Sluzby tretich stran</h3><p>Aplikace posila dotazy na verejne DNS-over-HTTPS resolvery. Odesila se jen nazev domeny.</p>
+<h3>Analytika</h3><p>Aplikace nepouziva zadnou analytiku, reklamy ani sledovani.</p>
+<h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="cz-terms" class="tab-content" style="display:none">
+<h2>Podminky sluzby</h2>
+<p><em>Ucinne od: 2026-04-20</em></p>
+<h3>Souhlas</h3><p>Zakoupenim a pouzivanim aplikace souhlasi&#769;te s temito podminkami.</p>
+<h3>Licencia</h3><p>Dostavate nevyhradni licenci k pouzivani aplikace na vlastnich zarizenich.</p>
+<h3>Bez zaruky</h3><p>Aplikace je poskytovana "tak jak je" bez jakychkoli zaruk.</p>
+<h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- GERMAN -->
+<div id="lang-de" class="section">
+<div class="window">
+<h1>DNS/HTTP Tester</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('de','privacy')">Datenschutz</button>
+  <button class="tab" onclick="switchTab('de','terms')">Nutzungsbedingungen</button>
+</div>
+<div id="de-privacy" class="tab-content">
+<h2>Datenschutzrichtlinie</h2>
+<p><em>G&uuml;ltig ab: 2026-04-20</em></p>
+<p>DNS/HTTP Tester ist ein Netzwerk-Diagnosetool. Wir nehmen Ihren Datenschutz ernst.</p>
+<h3>Datenerfassung</h3><p>Die App erfasst, speichert oder &uuml;bertr&auml;gt KEINE personenbezogenen Daten. Alles l&auml;uft lokal.</p>
+<h3>Lokaler Speicher</h3><p>Der Abfrageverlauf (max. 50) wird lokal auf Ihrem Ger&auml;t gespeichert.</p>
+<h3>Drittanbieter</h3><p>Die App sendet Anfragen an &ouml;ffentliche DNS-over-HTTPS-Resolver. Es wird nur der Domainname gesendet.</p>
+<h3>Analyse & Tracking</h3><p>Die App verwendet keine Analyse, Werbung oder Tracking.</p>
+<h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="de-terms" class="tab-content" style="display:none">
+<h2>Nutzungsbedingungen</h2>
+<p><em>G&uuml;ltig ab: 2026-04-20</em></p>
+<h3>Zustimmung</h3><p>Mit dem Kauf stimmen Sie diesen Bedingungen zu.</p>
+<h3>Lizenz</h3><p>Sie erhalten eine nicht-exklusive Lizenz zur Nutzung der App.</p>
+<h3>Keine Garantie</h3><p>Die App wird "wie besehen" ohne Gew&auml;hrleistung bereitgestellt.</p>
+<h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- RUSSIAN -->
+<div id="lang-ru" class="section">
+<div class="window">
+<h1>DNS/HTTP &#1058;&#1077;&#1089;&#1090;&#1077;&#1088;</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('ru','privacy')">&#1050;&#1086;&#1085;&#1092;&#1080;&#1076;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1100;</button>
+  <button class="tab" onclick="switchTab('ru','terms')">&#1059;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103;</button>
+</div>
+<div id="ru-privacy" class="tab-content">
+<h2>&#1055;&#1086;&#1083;&#1080;&#1090;&#1080;&#1082;&#1072; &#1082;&#1086;&#1085;&#1092;&#1080;&#1076;&#1077;&#1085;&#1094;&#1080;&#1072;&#1083;&#1100;&#1085;&#1086;&#1089;&#1090;&#1080;</h2>
+<p><em>&#1044;&#1072;&#1090;&#1072;: 2026-04-20</em></p>
+<p>DNS/HTTP &#1058;&#1077;&#1089;&#1090;&#1077;&#1088; &#8212; &#1080;&#1085;&#1089;&#1090;&#1088;&#1091;&#1084;&#1077;&#1085;&#1090; &#1089;&#1077;&#1090;&#1077;&#1074;&#1086;&#1081; &#1076;&#1080;&#1072;&#1075;&#1085;&#1086;&#1089;&#1090;&#1080;&#1082;&#1080;.</p>
+<h3>&#1057;&#1073;&#1086;&#1088; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093;</h3><p>&#1055;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077; &#1053;&#1045; &#1089;&#1086;&#1073;&#1080;&#1088;&#1072;&#1077;&#1090; &#1083;&#1080;&#1095;&#1085;&#1099;&#1077; &#1076;&#1072;&#1085;&#1085;&#1099;&#1077;. &#1042;&#1089;&#1105; &#1088;&#1072;&#1073;&#1086;&#1090;&#1072;&#1077;&#1090; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1086;.</p>
+<h3>&#1051;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1086;&#1077; &#1093;&#1088;&#1072;&#1085;&#1080;&#1083;&#1080;&#1097;&#1077;</h3><p>&#1048;&#1089;&#1090;&#1086;&#1088;&#1080;&#1103; (&#1084;&#1072;&#1082;&#1089;. 50) &#1093;&#1088;&#1072;&#1085;&#1080;&#1090;&#1089;&#1103; &#1083;&#1086;&#1082;&#1072;&#1083;&#1100;&#1085;&#1086;.</p>
+<h3>&#1057;&#1090;&#1086;&#1088;&#1086;&#1085;&#1085;&#1080;&#1077; &#1089;&#1077;&#1088;&#1074;&#1080;&#1089;&#1099;</h3><p>&#1055;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077; &#1086;&#1090;&#1087;&#1088;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090; &#1079;&#1072;&#1087;&#1088;&#1086;&#1089;&#1099; &#1082; &#1087;&#1091;&#1073;&#1083;&#1080;&#1095;&#1085;&#1099;&#1084; DNS &#1088;&#1077;&#1079;&#1086;&#1083;&#1074;&#1077;&#1088;&#1072;&#1084;. &#1055;&#1077;&#1088;&#1077;&#1076;&#1072;&#1105;&#1090;&#1089;&#1103; &#1090;&#1086;&#1083;&#1100;&#1082;&#1086; &#1080;&#1084;&#1103; &#1076;&#1086;&#1084;&#1077;&#1085;&#1072;.</p>
+<h3>&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="ru-terms" class="tab-content" style="display:none">
+<h2>&#1059;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103; &#1080;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1085;&#1080;&#1103;</h2>
+<p><em>&#1044;&#1072;&#1090;&#1072;: 2026-04-20</em></p>
+<h3>&#1055;&#1088;&#1080;&#1085;&#1103;&#1090;&#1080;&#1077;</h3><p>&#1055;&#1086;&#1082;&#1091;&#1087;&#1072;&#1103; &#1087;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077;, &#1074;&#1099; &#1089;&#1086;&#1075;&#1083;&#1072;&#1096;&#1072;&#1077;&#1090;&#1077;&#1089;&#1100; &#1089; &#1101;&#1090;&#1080;&#1084;&#1080; &#1091;&#1089;&#1083;&#1086;&#1074;&#1080;&#1103;&#1084;&#1080;.</p>
+<h3>&#1041;&#1077;&#1079; &#1075;&#1072;&#1088;&#1072;&#1085;&#1090;&#1080;&#1081;</h3><p>&#1055;&#1088;&#1080;&#1083;&#1086;&#1078;&#1077;&#1085;&#1080;&#1077; &#1087;&#1088;&#1077;&#1076;&#1086;&#1089;&#1090;&#1072;&#1074;&#1083;&#1103;&#1077;&#1090;&#1089;&#1103; &#171;&#1082;&#1072;&#1082; &#1077;&#1089;&#1090;&#1100;&#187;.</p>
+<h3>&#1050;&#1086;&#1085;&#1090;&#1072;&#1082;&#1090;</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- FRENCH -->
+<div id="lang-fr" class="section">
+<div class="window">
+<h1>DNS/HTTP Tester</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('fr','privacy')">Confidentialit&eacute;</button>
+  <button class="tab" onclick="switchTab('fr','terms')">Conditions</button>
+</div>
+<div id="fr-privacy" class="tab-content">
+<h2>Politique de confidentialit&eacute;</h2>
+<p><em>En vigueur: 2026-04-20</em></p>
+<p>DNS/HTTP Tester est un outil de diagnostic r&eacute;seau. Nous prenons votre vie priv&eacute;e au s&eacute;rieux.</p>
+<h3>Collecte de donn&eacute;es</h3><p>L'application NE collecte AUCUNE donn&eacute;e personnelle. Tout fonctionne localement.</p>
+<h3>Stockage local</h3><p>L'historique (max 50) est stock&eacute; localement sur votre appareil.</p>
+<h3>Services tiers</h3><p>L'application envoie des requ&ecirc;tes aux r&eacute;solveurs DNS publics. Seul le nom de domaine est envoy&eacute;.</p>
+<h3>Analyse</h3><p>Aucune analyse, publicit&eacute; ou suivi.</p>
+<h3>Contact</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="fr-terms" class="tab-content" style="display:none">
+<h2>Conditions d'utilisation</h2>
+<p><em>En vigueur: 2026-04-20</em></p>
+<h3>Acceptation</h3><p>En achetant l'application, vous acceptez ces conditions.</p>
+<h3>Sans garantie</h3><p>L'application est fournie "en l'&eacute;tat".</p>
+<h3>Contact</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<!-- JAPANESE -->
+<div id="lang-ja" class="section">
+<div class="window">
+<h1>DNS/HTTP&#12486;&#12473;&#12479;&#12540;</h1>
+<div class="tab-row">
+  <button class="tab active" onclick="switchTab('ja','privacy')">&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;</button>
+  <button class="tab" onclick="switchTab('ja','terms')">&#21033;&#29992;&#35215;&#32004;</button>
+</div>
+<div id="ja-privacy" class="tab-content">
+<h2>&#12503;&#12521;&#12452;&#12496;&#12471;&#12540;&#12509;&#12522;&#12471;&#12540;</h2>
+<p><em>&#26045;&#34892;&#26085;: 2026-04-20</em></p>
+<p>DNS/HTTP&#12486;&#12473;&#12479;&#12540;&#12399;&#12493;&#12483;&#12488;&#12527;&#12540;&#12463;&#35386;&#26029;&#12484;&#12540;&#12523;&#12391;&#12377;&#12290;</p>
+<h3>&#12487;&#12540;&#12479;&#21454;&#38598;</h3><p>&#12450;&#12503;&#12522;&#12399;&#20491;&#20154;&#12487;&#12540;&#12479;&#12434;&#21454;&#38598;&#12375;&#12414;&#12379;&#12435;&#12290;&#20840;&#12390;&#12525;&#12540;&#12459;&#12523;&#12391;&#21205;&#20316;&#12375;&#12414;&#12377;&#12290;</p>
+<h3>&#12525;&#12540;&#12459;&#12523;&#12473;&#12488;&#12524;&#12540;&#12472;</h3><p>&#23653;&#27508;&#65288;&#26368;&#22823;50&#20214;&#65289;&#12399;&#12487;&#12496;&#12452;&#12473;&#12395;&#12525;&#12540;&#12459;&#12523;&#20445;&#23384;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+<h3>&#12469;&#12540;&#12489;&#12497;&#12540;&#12486;&#12451;</h3><p>&#12450;&#12503;&#12522;&#12399;&#20844;&#38283;DNS&#12522;&#12478;&#12523;&#12496;&#12395;&#12522;&#12463;&#12456;&#12473;&#12488;&#12434;&#36865;&#20449;&#12375;&#12414;&#12377;&#12290;&#12489;&#12513;&#12452;&#12531;&#21517;&#12398;&#12415;&#36865;&#20449;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+<h3>&#36899;&#32097;&#20808;</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+<div id="ja-terms" class="tab-content" style="display:none">
+<h2>&#21033;&#29992;&#35215;&#32004;</h2>
+<p><em>&#26045;&#34892;&#26085;: 2026-04-20</em></p>
+<h3>&#21516;&#24847;</h3><p>&#36092;&#20837;&#12392;&#20351;&#29992;&#12395;&#12424;&#12426;&#12289;&#12371;&#12398;&#35215;&#32004;&#12395;&#21516;&#24847;&#12375;&#12383;&#12418;&#12398;&#12392;&#12415;&#12394;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+<h3>&#28961;&#20445;&#35388;</h3><p>&#12450;&#12503;&#12522;&#12399;&#12300;&#29694;&#29366;&#12398;&#12414;&#12414;&#12301;&#25552;&#20379;&#12373;&#12428;&#12414;&#12377;&#12290;</p>
+<h3>&#36899;&#32097;&#20808;</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+</div>
+</div>
+</div>
+
+<footer>
+  &copy; 2026 DNS/HTTP Tester | <a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a>
+</footer>
+
+</body>
+</html>
