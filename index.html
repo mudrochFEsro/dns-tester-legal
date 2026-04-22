@@ -5,25 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DNS/HTTP Tester — Legal</title>
 <style>
-html { background: #a5a4ce; font-family: 'Courier New', monospace; font-size: 10pt; }
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url('SourceCodePro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html { background: #a5a4ce; font-family: 'SourceCodePro', 'Courier New', monospace; font-size: 10pt; }
 body { padding: 0; margin: 0; }
-.window { position: relative; margin: 2em auto; width: 90%; max-width: 700px; background: #3465a4; color: #fff; border: 6px double #fff; padding: 1.5em; box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0,0,0,.5); }
+.window { position: relative; margin: 2em auto; width: 90%; max-width: 700px; background: #3465a4; color: #fff; border: 6px double #fff; padding: 1.5em; box-shadow: 0 0 0 3px #3465a4, 1em 1em 3px 0 rgba(0,0,0,.5); word-wrap: break-word; overflow-wrap: break-word; }
 h1, h2 { text-align: center; }
-h2 { color: #ff0; border-bottom: 1px solid #a8a8a8; padding-bottom: .3em; }
-h3 { color: #0ff; }
-a { color: #0ff; }
-.lang-nav { background: silver; text-align: center; padding: .5em; font-weight: bold; position: sticky; top: 0; z-index: 10; }
-.lang-nav a { color: #000; text-decoration: none; padding: 0 .8em; display: inline-block; }
+h1 { font-size: 1.5em; }
+h2 { color: #ff0; border-bottom: 1px solid #a8a8a8; padding-bottom: .3em; font-size: 1.3em; }
+h3 { color: #0ff; font-size: 1.1em; }
+a { color: #0ff; word-break: break-all; }
+p { line-height: 1.5; }
+.lang-nav { background: silver; text-align: center; padding: .5em; font-weight: bold; position: sticky; top: 0; z-index: 10; display: flex; justify-content: center; flex-wrap: wrap; gap: .2em; }
+.lang-nav a { color: #000; text-decoration: none; padding: .3em .8em; display: inline-block; }
 .lang-nav a:hover, .lang-nav a.active { background: #00f; color: #fff; }
 .section { display: none; }
 .section.active { display: block; }
 button.tab { background: green; color: #fff; border: 1px outset green; padding: .3em 1em; font-family: inherit; font-size: inherit; font-weight: bold; cursor: pointer; margin: .2em; box-shadow: .3em .3em 2px rgba(0,0,0,.4); }
 button.tab:hover { background: #32cd32; }
 button.tab.active { background: grey; box-shadow: none; }
-.tab-row { text-align: center; margin: 1em 0; }
-footer { background: silver; text-align: center; padding: 1em; color: #000; font-weight: bold; }
+.tab-row { text-align: center; margin: 1em 0; display: flex; justify-content: center; flex-wrap: wrap; gap: .3em; }
+footer { background: silver; text-align: center; padding: 1em; color: #000; font-weight: bold; font-size: .9em; }
 ul { padding-left: 1.5em; }
-@media (max-width: 600px) { .window { width: 95%; padding: 1em; margin: 1em auto; } }
+@media (max-width: 600px) {
+  html { font-size: 9pt; }
+  .window { width: auto; margin: .8em; padding: .8em; border-width: 4px; box-shadow: 0 0 0 2px #3465a4, .5em .5em 2px 0 rgba(0,0,0,.5); }
+  h1 { font-size: 1.3em; margin: .5em 0; }
+  h2 { font-size: 1.1em; }
+  h3 { font-size: 1em; }
+  .lang-nav { padding: .4em .2em; gap: .1em; }
+  .lang-nav a { padding: .4em .5em; font-size: .95em; }
+  button.tab { padding: .4em .7em; font-size: .9em; }
+  .tab-row { gap: .2em; }
+  footer { padding: .8em .5em; font-size: .85em; }
+  ul { padding-left: 1.2em; }
+}
+@media (max-width: 360px) {
+  html { font-size: 8.5pt; }
+  .window { margin: .5em; padding: .6em; }
+  .lang-nav a { padding: .3em .4em; font-size: .9em; }
+  button.tab { padding: .3em .5em; font-size: .85em; }
+}
 </style>
 <script>
 function switchLang(lang) {
