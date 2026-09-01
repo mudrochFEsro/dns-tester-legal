@@ -105,13 +105,13 @@ function switchTab(lang, tab) {
 <h3>Third-Party Services</h3>
 <p>The App makes requests to public DNS-over-HTTPS resolvers:</p>
 <ul>
-<li>Cloudflare (1.1.1.1)</li>
-<li>Google (8.8.8.8)</li>
-<li>Quad9 (9.9.9.9)</li>
-<li>Mozilla</li>
-<li>Wikimedia</li>
+<li>Cloudflare</li>
+<li>Google</li>
+<li>AliDNS</li>
+<li>DNS.SB</li>
+<li>NextDNS</li>
 </ul>
-<p>For SSL checks and subdomain discovery: crt.sh. For WHOIS: rdap.org and api.whois.vu. For hosting location/ASN: ipapi.co (the resolved IP address is sent — no personal identifier). Only the domain name you query (and, for the location feature, its resolved IP) is sent.</p>
+<p>For SSL checks and subdomain discovery: crt.sh and Cert Spotter. For WHOIS: rdap.org and api.whois.vu. For hosting location/ASN: ipapi.co (the resolved IP address is sent — no personal identifier). Only the domain name you query (and, for the location feature, its resolved IP) is sent.</p>
 <p>Web version only: browsers block cross-origin requests, so some lookups are routed through public CORS proxies (corsproxy.io, api.codetabs.com). The native iOS/Android apps connect directly and use no proxy.</p>
 <h3>Analytics & Tracking</h3>
 <p>The App does not use any analytics, crash reporting, advertising SDKs, or tracking.</p>
@@ -157,7 +157,7 @@ function switchTab(lang, tab) {
 <h3>Lokalne ulozisko</h3>
 <p>Historia dotazov a ulozene sledovane domeny so snimkami vysledkov (kazde max 50) su ulozene lokalne. Data nikdy neopustaju zariadenie. Exportovane reporty (TXT/JSON/CSV) sa zapisu len na vase vyziadanie a odovzdaju sa systemovemu zdielaniu — aplikacia ich nikam nenahrava.</p>
 <h3>Sluzby tretich stran</h3>
-<p>Aplikacia posiela dotazy na verejne DNS-over-HTTPS resolvery (Cloudflare, Google, Quad9, Mozilla, Wikimedia). Pre SSL a objavenie subdomen: crt.sh. Pre WHOIS: rdap.org a api.whois.vu. Pre lokalitu hostingu/ASN: ipapi.co (odosiela sa zistena IP adresa, ziadny osobny identifikator). Odosiela sa len nazov domeny, ktoru zadate (a pri funkcii lokality jej zistena IP). Len webova verzia: niektore dotazy idu cez verejne CORS proxy (corsproxy.io, api.codetabs.com); natívne iOS/Android appky sa pripajaju priamo bez proxy.</p>
+<p>Aplikacia posiela dotazy na verejne DNS-over-HTTPS resolvery (Cloudflare, Google, AliDNS, DNS.SB, NextDNS). Pre SSL a objavenie subdomen: crt.sh a Cert Spotter. Pre WHOIS: rdap.org a api.whois.vu. Pre lokalitu hostingu/ASN: ipapi.co (odosiela sa zistena IP adresa, ziadny osobny identifikator). Odosiela sa len nazov domeny, ktoru zadate (a pri funkcii lokality jej zistena IP). Len webova verzia: niektore dotazy idu cez verejne CORS proxy (corsproxy.io, api.codetabs.com); natívne iOS/Android appky sa pripajaju priamo bez proxy.</p>
 <h3>Analytika</h3>
 <p>Aplikacia nepouziva ziadnu analytiku, reklamy ani sledovanie.</p>
 <h3>Kontakt</h3>
@@ -189,7 +189,7 @@ function switchTab(lang, tab) {
 <p>DNS/HTTP Tester je nastroj pro diagnostiku site. Vase soukromi bereme vazne.</p>
 <h3>Sber dat</h3><p>Aplikace NESBIRA, neuklada ani neprena&#353;i zadne osobni udaje. Vse bezi lokalne.</p>
 <h3>Lokalni uloziste</h3><p>Historie dotazu a ulozene sledovane domeny se snimky vysledku (kazde max 50) jsou ulozeny lokalne na vasem zarizeni. Exportovane reporty (TXT/JSON/CSV) se zapisuji jen na vase vyzadani a aplikace je nikam nenahrava.</p>
-<h3>Sluzby tretich stran</h3><p>Aplikace posila dotazy na verejne DNS-over-HTTPS resolvery. Pro SSL a objeveni subdomen: crt.sh. Pro WHOIS: rdap.org a api.whois.vu. Pro lokalitu hostingu/ASN: ipapi.co (odesila se zjistena IP adresa). Odesila se jen nazev domeny (a u funkce lokality jeji IP). Pouze webova verze pouziva verejne CORS proxy (corsproxy.io, api.codetabs.com); nativni aplikace se pripojuji primo.</p>
+<h3>Sluzby tretich stran</h3><p>Aplikace posila dotazy na verejne DNS-over-HTTPS resolvery. Pro SSL a objeveni subdomen: crt.sh a Cert Spotter. Pro WHOIS: rdap.org a api.whois.vu. Pro lokalitu hostingu/ASN: ipapi.co (odesila se zjistena IP adresa). Odesila se jen nazev domeny (a u funkce lokality jeji IP). Pouze webova verze pouziva verejne CORS proxy (corsproxy.io, api.codetabs.com); nativni aplikace se pripojuji primo.</p>
 <h3>Analytika</h3><p>Aplikace nepouziva zadnou analytiku, reklamy ani sledovani.</p>
 <h3>Kontakt</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
@@ -438,19 +438,19 @@ function switchTab(lang, tab) {
 <div id="pt-BR-privacy" class="tab-content">
 <h2>[Política de Privacidade]</h2>
 <p><em>[Em vigor]: 2026-06-19</em></p>
-<p>[O DNS/HTTP Tester é uma ferramenta de diagnóstico de rede. Levamos sua privacidade a sério.]</p>
-<h3>[Coleta de Dados]</h3><p>[O App NÃO coleta nenhum dado pessoal. Tudo é executado localmente no seu dispositivo.]</p>
-<h3>[Armazenamento Local]</h3><p>[O histórico e os domínios salvos na sua Watchlist com seus snapshots (máx. 50 cada) são armazenados localmente no seu dispositivo. Os relatórios exportados (TXT/JSON/CSV) são criados somente quando você solicita e entregues à folha de compartilhamento do sistema — o App nunca os envia para servidores.]</p>
-<h3>[Serviços de Terceiros]</h3><p>[O App envia requisições a resolvedores públicos de DNS. Apenas o nome do domínio é enviado.]</p>
-<h3>[Análise e Rastreamento]</h3><p>[Sem análises, anúncios ou rastreamento.]</p>
-<h3>[Contato]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<p>O DNS/HTTP Tester é uma ferramenta de diagnóstico de rede. Levamos sua privacidade a sério.</p>
+<h3>Coleta de Dados</h3><p>O App NÃO coleta nenhum dado pessoal. Tudo é executado localmente no seu dispositivo.</p>
+<h3>Armazenamento Local</h3><p>O histórico e os domínios salvos na sua Watchlist com seus snapshots (máx. 50 cada) são armazenados localmente no seu dispositivo. Os relatórios exportados (TXT/JSON/CSV) são criados somente quando você solicita e entregues à folha de compartilhamento do sistema — o App nunca os envia para servidores.</p>
+<h3>Serviços de Terceiros</h3><p>O App envia requisições a resolvedores públicos de DNS. Apenas o nome do domínio é enviado.</p>
+<h3>Análise e Rastreamento</h3><p>Sem análises, anúncios ou rastreamento.</p>
+<h3>Contato</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 <div id="pt-BR-terms" class="tab-content" style="display:none">
 <h2>[Termos de Serviço]</h2>
 <p><em>[Em vigor]: 2026-06-19</em></p>
-<h3>[Aceitação]</h3><p>[Ao comprar e usar o App, você concorda com estes Termos.]</p>
-<h3>[Sem Garantia]</h3><p>[O App é fornecido "no estado em que se encontra". Os resultados são apenas informativos.]</p>
-<h3>[Contato]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<h3>Aceitação</h3><p>Ao comprar e usar o App, você concorda com estes Termos.</p>
+<h3>Sem Garantia</h3><p>O App é fornecido "no estado em que se encontra". Os resultados são apenas informativos.</p>
+<h3>Contato</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 </div>
 </div>
@@ -466,19 +466,19 @@ function switchTab(lang, tab) {
 <div id="id-privacy" class="tab-content">
 <h2>[Kebijakan Privasi]</h2>
 <p><em>[Berlaku]: 2026-06-19</em></p>
-<p>[DNS/HTTP Tester adalah alat diagnostik jaringan. Kami menganggap serius privasi Anda.]</p>
-<h3>[Pengumpulan Data]</h3><p>[Aplikasi TIDAK mengumpulkan data pribadi apa pun. Semuanya berjalan secara lokal di perangkat Anda.]</p>
-<h3>[Penyimpanan Lokal]</h3><p>[Riwayat dan domain Watchlist tersimpan Anda beserta snapshot-nya (maksimal 50 masing-masing) disimpan secara lokal di perangkat Anda. Laporan yang diekspor (TXT/JSON/CSV) dibuat hanya ketika Anda meminta dan diserahkan ke lembar berbagi sistem — Aplikasi tidak pernah mengunggahnya.]</p>
-<h3>[Layanan Pihak Ketiga]</h3><p>[Aplikasi mengirimkan permintaan ke resolver DNS publik. Hanya nama domain yang dikirim.]</p>
-<h3>[Analitik & Pelacakan]</h3><p>[Tanpa analitik, iklan, atau pelacakan.]</p>
-<h3>[Kontak]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<p>DNS/HTTP Tester adalah alat diagnostik jaringan. Kami menganggap serius privasi Anda.</p>
+<h3>Pengumpulan Data</h3><p>Aplikasi TIDAK mengumpulkan data pribadi apa pun. Semuanya berjalan secara lokal di perangkat Anda.</p>
+<h3>Penyimpanan Lokal</h3><p>Riwayat dan domain Watchlist tersimpan Anda beserta snapshot-nya (maksimal 50 masing-masing) disimpan secara lokal di perangkat Anda. Laporan yang diekspor (TXT/JSON/CSV) dibuat hanya ketika Anda meminta dan diserahkan ke lembar berbagi sistem — Aplikasi tidak pernah mengunggahnya.</p>
+<h3>Layanan Pihak Ketiga</h3><p>Aplikasi mengirimkan permintaan ke resolver DNS publik. Hanya nama domain yang dikirim.</p>
+<h3>Analitik & Pelacakan</h3><p>Tanpa analitik, iklan, atau pelacakan.</p>
+<h3>Kontak</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 <div id="id-terms" class="tab-content" style="display:none">
 <h2>[Ketentuan Layanan]</h2>
 <p><em>[Berlaku]: 2026-06-19</em></p>
-<h3>[Penerimaan]</h3><p>[Dengan membeli dan menggunakan Aplikasi, Anda menyetujui Ketentuan ini.]</p>
-<h3>[Tanpa Jaminan]</h3><p>[Aplikasi disediakan "sebagaimana adanya". Hasil hanya bersifat informatif.]</p>
-<h3>[Kontak]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<h3>Penerimaan</h3><p>Dengan membeli dan menggunakan Aplikasi, Anda menyetujui Ketentuan ini.</p>
+<h3>Tanpa Jaminan</h3><p>Aplikasi disediakan "sebagaimana adanya". Hasil hanya bersifat informatif.</p>
+<h3>Kontak</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 </div>
 </div>
@@ -494,19 +494,19 @@ function switchTab(lang, tab) {
 <div id="tr-privacy" class="tab-content">
 <h2>[Gizlilik Politikası]</h2>
 <p><em>[Yürürlük tarihi]: 2026-06-19</em></p>
-<p>[DNS/HTTP Tester bir ağ tanılama aracıdır. Gizliliğinizi ciddiye alıyoruz.]</p>
-<h3>[Veri Toplama]</h3><p>[Uygulama hiçbir kişisel veri TOPLAMAZ. Her şey cihazınızda yerel olarak çalışır.]</p>
-<h3>[Yerel Depolama]</h3><p>[Geçmiş ve anlık görüntüleriyle birlikte kaydettiğiniz Watchlist alan adları (her biri en fazla 50) cihazınızda yerel olarak saklanır. Dışa aktarılan raporlar (TXT/JSON/CSV) yalnızca siz istediğinizde oluşturulur ve sistemin paylaşım penceresine iletilir — Uygulama bunları asla karşıya yüklemez.]</p>
-<h3>[Üçüncü Taraf Hizmetleri]</h3><p>[Uygulama genel DNS çözümleyicilerine istek gönderir. Yalnızca alan adı gönderilir.]</p>
-<h3>[Analitik ve Takip]</h3><p>[Analitik, reklam veya takip yoktur.]</p>
-<h3>[İletişim]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<p>DNS/HTTP Tester bir ağ tanılama aracıdır. Gizliliğinizi ciddiye alıyoruz.</p>
+<h3>Veri Toplama</h3><p>Uygulama hiçbir kişisel veri TOPLAMAZ. Her şey cihazınızda yerel olarak çalışır.</p>
+<h3>Yerel Depolama</h3><p>Geçmiş ve anlık görüntüleriyle birlikte kaydettiğiniz Watchlist alan adları (her biri en fazla 50) cihazınızda yerel olarak saklanır. Dışa aktarılan raporlar (TXT/JSON/CSV) yalnızca siz istediğinizde oluşturulur ve sistemin paylaşım penceresine iletilir — Uygulama bunları asla karşıya yüklemez.</p>
+<h3>Üçüncü Taraf Hizmetleri</h3><p>Uygulama genel DNS çözümleyicilerine istek gönderir. Yalnızca alan adı gönderilir.</p>
+<h3>Analitik ve Takip</h3><p>Analitik, reklam veya takip yoktur.</p>
+<h3>İletişim</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 <div id="tr-terms" class="tab-content" style="display:none">
 <h2>[Hizmet Şartları]</h2>
 <p><em>[Yürürlük tarihi]: 2026-06-19</em></p>
-<h3>[Kabul]</h3><p>[Uygulamayı satın alarak ve kullanarak bu Şartları kabul etmiş olursunuz.]</p>
-<h3>[Garanti Yok]</h3><p>[Uygulama "olduğu gibi" sunulmaktadır. Sonuçlar yalnızca bilgilendirme amaçlıdır.]</p>
-<h3>[İletişim]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<h3>Kabul</h3><p>Uygulamayı satın alarak ve kullanarak bu Şartları kabul etmiş olursunuz.</p>
+<h3>Garanti Yok</h3><p>Uygulama "olduğu gibi" sunulmaktadır. Sonuçlar yalnızca bilgilendirme amaçlıdır.</p>
+<h3>İletişim</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 </div>
 </div>
@@ -522,19 +522,19 @@ function switchTab(lang, tab) {
 <div id="ko-privacy" class="tab-content">
 <h2>[개인정보 처리방침]</h2>
 <p><em>[시행일]: 2026-06-19</em></p>
-<p>[DNS/HTTP Tester는 네트워크 진단 도구입니다. 저희는 귀하의 개인정보를 소중히 여깁니다.]</p>
-<h3>[데이터 수집]</h3><p>[본 앱은 어떠한 개인정보도 수집하지 않습니다. 모든 작업은 귀하의 기기에서 로컬로 실행됩니다.]</p>
-<h3>[로컬 저장소]</h3><p>[기록과 귀하가 저장한 Watchlist 도메인 및 해당 스냅샷(각 최대 50개)은 귀하의 기기에 로컬로 저장됩니다. 내보낸 보고서(TXT/JSON/CSV)는 귀하가 요청할 때만 생성되어 시스템 공유 시트로 전달되며, 본 앱은 이를 절대 업로드하지 않습니다.]</p>
-<h3>[제3자 서비스]</h3><p>[본 앱은 공개 DNS 리졸버에 요청을 보냅니다. 도메인 이름만 전송됩니다.]</p>
-<h3>[분석 및 추적]</h3><p>[분석, 광고 또는 추적이 없습니다.]</p>
-<h3>[문의]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<p>DNS/HTTP Tester는 네트워크 진단 도구입니다. 저희는 귀하의 개인정보를 소중히 여깁니다.</p>
+<h3>데이터 수집</h3><p>본 앱은 어떠한 개인정보도 수집하지 않습니다. 모든 작업은 귀하의 기기에서 로컬로 실행됩니다.</p>
+<h3>로컬 저장소</h3><p>기록과 귀하가 저장한 Watchlist 도메인 및 해당 스냅샷(각 최대 50개)은 귀하의 기기에 로컬로 저장됩니다. 내보낸 보고서(TXT/JSON/CSV)는 귀하가 요청할 때만 생성되어 시스템 공유 시트로 전달되며, 본 앱은 이를 절대 업로드하지 않습니다.</p>
+<h3>제3자 서비스</h3><p>본 앱은 공개 DNS 리졸버에 요청을 보냅니다. 도메인 이름만 전송됩니다.</p>
+<h3>분석 및 추적</h3><p>분석, 광고 또는 추적이 없습니다.</p>
+<h3>문의</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 <div id="ko-terms" class="tab-content" style="display:none">
 <h2>[서비스 이용약관]</h2>
 <p><em>[시행일]: 2026-06-19</em></p>
-<h3>[동의]</h3><p>[본 앱을 구매하고 사용함으로써, 귀하는 본 약관에 동의하게 됩니다.]</p>
-<h3>[보증 없음]</h3><p>[본 앱은 "있는 그대로" 제공됩니다. 결과는 참고용일 뿐입니다.]</p>
-<h3>[문의]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<h3>동의</h3><p>본 앱을 구매하고 사용함으로써, 귀하는 본 약관에 동의하게 됩니다.</p>
+<h3>보증 없음</h3><p>본 앱은 "있는 그대로" 제공됩니다. 결과는 참고용일 뿐입니다.</p>
+<h3>문의</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 </div>
 </div>
@@ -550,19 +550,19 @@ function switchTab(lang, tab) {
 <div id="it-privacy" class="tab-content">
 <h2>[Informativa sulla privacy]</h2>
 <p><em>[In vigore dal]: 2026-06-19</em></p>
-<p>[DNS/HTTP Tester è uno strumento di diagnostica di rete. Prendiamo sul serio la tua privacy.]</p>
-<h3>[Raccolta dei dati]</h3><p>[L'App NON raccoglie alcun dato personale. Tutto viene eseguito localmente sul tuo dispositivo.]</p>
-<h3>[Archiviazione locale]</h3><p>[La cronologia e i domini salvati nella tua Watchlist con i relativi snapshot (massimo 50 ciascuno) sono memorizzati localmente sul tuo dispositivo. I report esportati (TXT/JSON/CSV) vengono creati solo su tua richiesta e consegnati al menu di condivisione del sistema — l'App non li carica mai.]</p>
-<h3>[Servizi di terze parti]</h3><p>[L'App invia richieste a resolver DNS pubblici. Viene inviato solo il nome del dominio.]</p>
-<h3>[Analisi e tracciamento]</h3><p>[Nessuna analisi, pubblicità o tracciamento.]</p>
-<h3>[Contatti]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<p>DNS/HTTP Tester è uno strumento di diagnostica di rete. Prendiamo sul serio la tua privacy.</p>
+<h3>Raccolta dei dati</h3><p>L'App NON raccoglie alcun dato personale. Tutto viene eseguito localmente sul tuo dispositivo.</p>
+<h3>Archiviazione locale</h3><p>La cronologia e i domini salvati nella tua Watchlist con i relativi snapshot (massimo 50 ciascuno) sono memorizzati localmente sul tuo dispositivo. I report esportati (TXT/JSON/CSV) vengono creati solo su tua richiesta e consegnati al menu di condivisione del sistema — l'App non li carica mai.</p>
+<h3>Servizi di terze parti</h3><p>L'App invia richieste a resolver DNS pubblici. Viene inviato solo il nome del dominio.</p>
+<h3>Analisi e tracciamento</h3><p>Nessuna analisi, pubblicità o tracciamento.</p>
+<h3>Contatti</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 <div id="it-terms" class="tab-content" style="display:none">
 <h2>[Termini di servizio]</h2>
 <p><em>[In vigore dal]: 2026-06-19</em></p>
-<h3>[Accettazione]</h3><p>[Acquistando e utilizzando l'App, accetti questi Termini.]</p>
-<h3>[Nessuna garanzia]</h3><p>[L'App è fornita "così com'è". I risultati sono solo a scopo informativo.]</p>
-<h3>[Contatti]</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
+<h3>Accettazione</h3><p>Acquistando e utilizzando l'App, accetti questi Termini.</p>
+<h3>Nessuna garanzia</h3><p>L'App è fornita "così com'è". I risultati sono solo a scopo informativo.</p>
+<h3>Contatti</h3><p><a href="mailto:mudroch.juraj@protonmail.com">mudroch.juraj@protonmail.com</a></p>
 </div>
 </div>
 </div>
